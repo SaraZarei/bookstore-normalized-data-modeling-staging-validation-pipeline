@@ -118,7 +118,7 @@ This creates **transitive dependencies**, where non-key columns depend on other 
 This diagram shows the foreign key relationships between the tables in the data model.
 
 
-![Entity Relationship Diagram](./images/erd_diagram.png)
+![Entity Relationship Diagram](./images/ERD_diagram.png)
 
 ### 📥 Data Loading to Staging
 
