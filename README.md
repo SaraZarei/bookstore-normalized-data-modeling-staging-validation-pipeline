@@ -126,3 +126,29 @@ To automate the process of loading data from CSV files into the staging schema o
 
 You can find the automation script here:  
 `LoadData_to_Table_in_Database.py` (located in the `scripts` folder).
+
+### 🧩 Explanation of Python Scripts 
+
+- [`main.py`](./scripts/main.py) 
+
+This script uses two custom helper functions stored in separate Python files:
+
+- `convert_spaces_to_underline_for_column_name`:  
+  Replaces spaces in column names with underscores to standardize field names before loading.
+
+- `load_data_into_tableDataset`:  
+  Handles inserting a DataFrame into the corresponding PostgreSQL table within the specified schema.
+
+These functions are imported and used to streamline the data cleaning and loading process.
+
+- [`checking_PK.py`](./scripts/checking_PK.py) 
+
+- This script checks whether specific columns in selected Excel sheets can be used as primary keys. It verifies that each column is unique and has no null values.
+
+- [`Validation_Insert.sql`](./scripts/Validation_Insert.sql) 
+
+- This SQL script validates and then loads data from the tables in `staging` schema into tables in `Production` schema 
+
+- [`staging.sql`](./scripts/staging.sql) 
+
+- This SQL script loads data from Excel sheets into tables in `staging` schema 
